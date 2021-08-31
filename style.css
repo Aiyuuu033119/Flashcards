@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: #8e81ff;
+}
+
+button{
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: whitesmoke;
+}
+
+button:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container{
+  margin: 0 1.5rem ;
+}
+
+header{background-color: #fff;}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+  padding: 0 20px;
+  background: #fff;
+}
+
+#header button{
+  border-radius: 5px;
+  outline-width: 0px;
+  outline-color: unset;
+  padding: 10px 15px;
+}
+
+#show_card_box, #save_card{
+  border: 1px solid #8e81ff;
+  background-color: #8e81ff;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 5px;
+}
+
+#delete_cards, #close_card_box{
+  border: 1px solid #f76a6a;
+  background-color: transparent;
+  color: #f76a6a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#create_card{
+  width: 370px;
+  margin:auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: white;
+  border-radius: 5px;
+}
+
+#create_card h2{
+  color: black;
+  text-align: center;
+}
+
+#create_card textarea{
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  outline-width: 0px;
+  outline-color: unset;
+  padding: 5px;
+}
+
+#create_card button{width: fit-content;}
+
+#buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#save_card, #close_card_box{
+  font-family: inherit;
+  border-radius: 5px;
+  outline-width: 0px;
+  outline-color: unset;
+  padding: 10px 15px;
+}
+
+#flashcards{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
+  justify-content: center;
+}
+
+.flashcard{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 10px;
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  cursor: pointer;
+  border-radius: 10px;
+  /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9); */
+}
+
+.flashcard h2{font-size: 1rem;}
+
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .container{margin: 0;}
+
+  .flashcard{margin: auto;}
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #create_card{width: 95%;}
+
+  .flashcard{width: 100%;}
+
+}
+
+#modal{
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
